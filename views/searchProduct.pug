@@ -1,0 +1,34 @@
+extends layoutActiveNav
+
+block content
+  nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+    .container
+      a(href="/")
+        i#logo.fas.fa-shopping-basket.fa-lg
+      a.navbar-brand(href="/") GroBro
+      button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarScroll.collapse.navbar-collapse
+        ul.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll(style="--bs-scroll-height: 100px;")
+          li.nav-item
+            a.nav-link(href="/about") Über uns
+          li.nav-item
+            a.nav-link.active(href="/search") Bestandssuche
+          li.nav-item
+            a.nav-link(href="/list") Produktübersicht
+          li.nav-item
+            a.nav-link(href="/add") Produkt hinzufügen
+  br
+  br
+  .container
+    h1.text-center= title
+    hr
+    br
+    #grad.container.shadow.p-3.mb-5.rounded
+      br
+      form#infoControl
+        #formColor.form-floating
+          input#search.form-control(type="text", name="search", placeholder="Produktnamen eingeben...")
+          label(for="floatingInput") Produktnamen eingeben...
+        #match-list
+      br

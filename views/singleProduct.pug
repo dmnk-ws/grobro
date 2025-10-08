@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  h1.text-center=title
+  hr
+  .container
+    .row.justify-content-center.g-6
+        #cardSingle.card.shadow.p-3.mb-5.bg-body.rounded
+          #containerSingleImg.container
+            img#singleImg.img.rounded.mx-auto.d-block(src= product.pictureSingleURL)
+          .container
+            img#barcodeImg.img.rounded.mx-auto.d-block(src= product.pictureBarcodeURL)
+          .card-body
+            h2.text-center= product.name
+          table#singleTable.table.table-striped
+            tbody
+              tr
+                th#th(scope="row") Anzahl:
+                td
+                  .input-group
+                    button#decreaseQuantity.btn.btn-outline-dark.btn-sm(type='button', name=product.id)
+                      i.fas.fa-minus(name=product.id)
+                    input#quantityInput.form-control-extra-sm(type="number", name="quantitiy", placeholder="Quantity", value=product.quantity, disabled)
+                    button#increaseQuantity.btn.btn-outline-dark.btn-sm(type='button', name=product.id)
+                      i.fas.fa-plus(name=product.id)
+              tr
+                th#th(scope="row") Mindestens haltbar bis:
+                td= product.bestBefore + ", noch " + product.daysBeforeExpiry + " Tage haltbar"
+              tr
+                th#th(scope="row") Inhaltsstoffe:
+                td= product.ingredients
+          p
+            a.btn.btn-outline-dark(data-bs-toggle='collapse' href='#collapseExample' role='button' aria-expanded='false' aria-controls='collapseExample') Nährwerte
+            #collapseExample.collapse
+              table.table.table-striped
+                tbody
+                  tr
+                    th#nutrientTable(scope="row") Brennwert
+                    td= product.nutrients.energyValue
+                  tr
+                    th#nutrientTable(scope="row") Kohlenhydrate
+                    td= product.nutrients.carbohydrates
+                  tr
+                    th#nutrientTable(scope="row") Zucker
+                    td= product.nutrients.sugar
+                  tr
+                    th#nutrientTable(scope="row") Fett
+                    td= product.nutrients.fat
+                  tr
+                    th#nutrientTable(scope="row") Eiweiß
+                    td= product.nutrients.protein
+                  tr
+                    th#nutrientTable(scope="row") Salz
+                    td= product.nutrients.salt
+          p
+            a#editButtonSingle.btn.btn-outline-dark(href="/products/edit/" + product.id) Bearbeiten
+            a#deleteButton.btn.btn-outline-danger(name=product.id) Löschen
+            a#backButton.btn.btn-outline-dark(href="/list") ← Zurück
+

@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Roboto&display=swap');
+
+
+/*----------- CSS general -----------*/
+body {
+  padding: 50px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(245, 245, 245);
+}
+
+#container {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+#grad {
+  background-image: linear-gradient(to bottom right, rgb(216, 216, 216), rgb(241, 241, 241));
+}
+
+h1 {
+  font-size: 5em;
+  font-family: 'Bebas Neue', cursive;
+}
+
+h2, h3, h5 {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+#logo {
+  color: white;
+  margin-right: 0.5em;
+}
+
+#findUs {
+  display: flex;
+  float: right;
+}
+
+#social {
+  color: black;
+  border: white;
+  margin-right: 0.25em;
+}
+
+#social:hover {
+  color: rgb(143, 143, 143);
+  border: black;
+}
+
+
+/*----------- CSS index -----------*/
+#home {
+  background-image: url("/images/shoppingbag.png");                                 /*Quelle von shoppingbag: https://unsplash.com/photos/_kUCAyYFVBI*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#softwareDescription {
+  position: absolute;
+  right: 8em;
+  width: 33%;
+  height: 20em;
+  margin-top: 12em;
+  font-family: 'Lato', sans-serif;
+}
+
+#aboutBtn {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*----------- CSS about -----------*/
+#indexAboutContainer {
+  display: block;
+  overflow: auto;
+}
+
+.page {
+  margin: 0 auto;
+  height: 70em;
+}
+
+#text {
+  text-align: justify;
+  font-family: 'Lato', sans-serif;
+}
+
+#profileImg {
+  float: left;
+  margin: 0 1em 0.2em 0.2em;
+  max-width: 50%;
+}
+
+.section {
+  margin-top: 1em;
+}
+
+.article {
+  padding: 0 1rem;
+  display: table-cell;
+}
+
+.aside {
+  display: table-cell;
+  width: 100vw;
+}
+
+.half {
+  margin-top: 2rem;
+  padding: 0rem 1rem 0rem 1rem;
+  clear: both;
+  text-align: justify;
+}
+
+#philosophyBtn {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*----------- CSS philosophy -----------*/
+#backBtn {
+  font-family: 'Roboto', sans-serif;
+  float: right;
+}
+
+
+/*----------- CSS searchProduct -----------*/
+
+
+
+/*----------- CSS listProducts -----------*/
+#cardList {
+  margin: 1rem;
+  width: 15rem;
+  border: none;
+  background-image: linear-gradient(to bottom right, rgb(216, 216, 216), rgb(241, 241, 241));
+}
+
+#containerListImg {
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#listImg {
+  height: auto;
+  width: auto;
+}
+
+#listTableHead {
+  width: 40%;
+  font-size: 1.1em;
+}
+
+#listTable {
+  display: block;
+  margin: auto;
+  width: 90%;
+}
+
+#productHeadline {
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*----------- CSS singleProduct -----------*/
+#cardSingle {
+  margin: 1rem;
+  width: 50rem;
+  border: none;
+  background-image: linear-gradient(to bottom right, rgb(216, 216, 216), rgb(241, 241, 241));
+}
+
+#containerSingleImg {
+  margin: 2rem;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#singleImg {
+  width: auto;
+  height: auto;
+}
+
+#barcodeImg {
+  height: auto;
+  width: auto;
+  margin-bottom: 2em;
+}
+
+#th {
+  font-size: 1.1em;
+}
+
+#nutrientTable {
+  width: 70%;
+  font-size: 1.1em;
+}
+
+#backButton {
+  float: right;
+}
+
+#deleteButton {
+  margin-left: 0.5em;
+}
+
+#quantityInput {
+  text-align: center;
+  border-color: black;
+  border-width: 1px;
+}
+
+
+/*----------- CSS createProduct -----------*/
+#addButton:hover {
+  background-color: black;
+}
+
+
+
+/*----------- CSS responsive -----------*/
+@media screen and (min-width: 64em) {
+
+  .half {
+    padding: 1em 2em 1em 2em;
+    display: block;
+    width: 50%; 
+    float: left;
+    clear: none;
+  }
+
+}
+
+
+@media screen and (max-width: 70em) {
+
+  .page {
+    height: 35em;
+  }
+
+  #softwareDescription {
+    width: 30%;
+    margin-top: 5em;
+    right: 8em;
+  }
+
+}
+
+
+@media screen and (max-width: 50em) {
+
+  .page {
+    height: 30em;
+  }
+
+  #softwareDescription {
+    height: 20em;
+    margin-top: 2em;
+    right: 4em;
+  }
+
+}
+
+
+@media screen and (max-width: 32em) {
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  #findUs {
+    display: flex;
+    justify-content: center;
+    float: none;
+    margin-bottom: 0.5em;
+  }
+
+  #social {
+    font-size: 2em;
+  }
+
+  .page {
+    height: 23em;
+  }
+
+  #softwareDescription {
+    right: unset;
+    width: auto;
+    text-align: center;
+    height: 10em;
+    margin-top: 2em;
+    font-size: 0.5em;
+  }
+
+  #aboutBtn {
+    font-size: 1em;
+    margin-top: 22em;
+  }
+
+  #singleImg {
+    width: 100%;
+  }
+
+  #barcodeImg {
+    width: 75%;
+  }
+
+  #quantityInput {
+    width: 2.5em;
+  }
+
+  #text {
+    font-size: 0.5em;
+  }
+
+  #backButton {
+    float: none;
+    margin-top: 0.5em;
+  }
+
+  #tbl {
+    font-size: 0.5em;
+  }
+
+  #nameInput {
+    font-size: 1.5em;
+  }
+
+  #quantityInputEdit {
+    font-size: 1.5em;
+  }
+
+  #expiryDateInput {
+    font-size: 1.5em;
+  }
+
+  #ingredientsInput {
+    font-size: 1.5em;
+  }
+
+}

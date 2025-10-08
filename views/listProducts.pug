@@ -1,0 +1,44 @@
+extends layoutActiveNav
+
+block content
+  nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+    .container
+      a(href="/")
+        i#logo.fas.fa-shopping-basket.fa-lg
+      a.navbar-brand(href="/") GroBro
+      button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarScroll.collapse.navbar-collapse
+        ul.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll(style="--bs-scroll-height: 100px;")
+          li.nav-item
+            a.nav-link(href="/about") Über uns
+          li.nav-item
+            a.nav-link(href="/search") Bestandssuche
+          li.nav-item
+            a.nav-link.active(href="/list") Produktübersicht
+          li.nav-item
+            a.nav-link(href="/add") Produkt hinzufügen
+  br
+  br
+  .container
+    h1.text-center=title
+    hr
+    .row.justify-content-center.g-6
+      each value in products
+        #cardList.card.shadow.p-3.mb-5.bg-body.rounded
+          #containerListImg.container
+            img#listImg.img.rounded.mx-auto.d-block(src= value.pictureListURL)
+          table#listTable.table
+            thead
+              tr
+                h5#productHeadline.text-center= value.name
+              br
+            tbody
+              tr
+                th#listTableHead(scope="row") Anzahl:
+                td= value.quantity
+              tr
+                th#listTableHead(scope="row") Mindestens haltbar bis:
+                td= value.bestBefore + ", noch " + value.daysBeforeExpiry + " Tage haltbar"
+          .card-body.text-center
+            a#showButton.btn.btn-outline-dark(href="/products/"+ value.id) Anzeigen

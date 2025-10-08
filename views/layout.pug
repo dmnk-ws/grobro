@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    title GroBro
+    link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet" href="/stylesheets/fontawesome/css/all.min.css")
+    link(rel="stylesheet" href="/stylesheets/style.css")
+    link(rel="shortcut icon" type="image/x-icon" href="/images/icon.png")
+  body
+    nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+      .container
+        a(href="/")
+          i#logo.fas.fa-shopping-basket.fa-lg
+        a.navbar-brand(href="/") GroBro
+        button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        #navbarScroll.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll(style="--bs-scroll-height: 100px;")
+            li.nav-item
+              a.nav-link(href="/about") Über uns
+            li.nav-item
+              a.nav-link(href="/search") Bestandssuche
+            li.nav-item
+              a.nav-link(href="/list") Produktübersicht
+            li.nav-item
+              a.nav-link(href="/add") Produkt hinzufügen
+    br
+    br
+    .container
+      block content
+      hr
+      footer
+        div#findUs
+          a(href="https://www.facebook.com")
+            i#social.fab.fa-facebook-square.fa-3x
+          a(href="https://www.instagram.com")
+            i#social.fab.fa-instagram.fa-3x
+          a(href="https://www.amazon.com")
+            i#social.fab.fa-amazon.fa-3x
+          a(href="https://www.youtube.com")
+            i#social.fab.fa-youtube.fa-3x
+          a(href="https://www.pinterest.com")
+            i#social.fab.fa-pinterest-square.fa-3x
+          a(href="https://www.twitter.com")
+            i#social.fab.fa-twitter-square.fa-3x
+        br
+        p Copyright &copy; 2021 GroBro Inc. Alle Rechte vorbehalten.
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+    script(src="/javascripts/httpMethods.js")
+    script(src="/javascripts/searchProduct.js")
+    script(src="/javascripts/validation.js")

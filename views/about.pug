@@ -1,0 +1,46 @@
+extends layoutActiveNav
+
+block content
+  nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+    .container
+      a(href="/")
+        i#logo.fas.fa-shopping-basket.fa-lg
+      a.navbar-brand(href="/") GroBro
+      button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarScroll.collapse.navbar-collapse
+        ul.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll(style="--bs-scroll-height: 100px;")
+          li.nav-item
+            a.nav-link.active(href="/about") Über uns
+          li.nav-item
+            a.nav-link(href="/search") Bestandssuche
+          li.nav-item
+            a.nav-link(href="/list") Produktübersicht
+          li.nav-item
+            a.nav-link(href="/add") Produkt hinzufügen
+  br
+  br
+  .container
+    h1.text-center= title
+    hr
+    br
+    #grad.container.shadow.p-3.mb-5.rounded
+      #indexAboutContainer
+        .section
+          article.half
+            aside.aside
+              h2 Gründer
+              p#text
+                img#profileImg(src="/images/Profilbild_Dominik.jpg")
+                | Mein Name ist Dominik Wies und ich studiere Digitale Medien seit Anfang Oktober 2020 an der Hochschule in Fulda. Ich wurde 1993 in Gelnhausen geboren und lebe momentan in einem schönen, kleinen Dorf im Main-Kinzig-Kreis. Nach dem Abitur habe ich eine Berufsausbildung als Bankkaufmann absolviert und war nach dem Bestehen der Prüfung noch weitere zwei Jahre im selben Unternehmen angestellt. Allerdings wurde mir nach dieser Zeit klar, dass ich nicht für immer in diesem Berufsfeld arbeiten möchte. Ich habe mich sehr nach einer neuen Herausforderung gesehnt, deswegen habe ich die Entscheidung getroffen einige Zeit im Ausland zu verbringen. Die letzten zwei Jahre habe ich in Neuseeland gelebt und konnte dort sehr tolle Erfahrungen sammeln. Vor Beginn der Reise war ich mir jedoch bewusst, dass ich wieder zurück in die Heimat kommen werde, da ich ein gestalterisches, aber auch technisch orientiertes Studium beginnen wollte und die meisten Universitäten in Deutschland hervorragende und vor allem sehr günstige Bildungsmöglichkeiten bieten.
+          article.half
+            h2 Unternehmen
+            p#text
+              | Die Grocery Brother Inc. wurde im Jahr 2021 gegründet. Wir kümmern uns darum Ihnen eine herausragende Software zu liefern, um ihren Alltag zu erleichtern und zusätzlich der Umwelt etwas Gutes zu tun. Wir bieten Ihnen eine zuverlässige Übersicht zur Verwaltung Ihrer Lebensmittel von Zuhause und hoffen dadurch dazu beitragen zu können die Verschwendung von Lebensmitteln etwas einzudämmen. Wir sind stets bemüht unsere Software zu aktualisieren und zu verbessern und werden Ihnen zukünftig noch weitere Features anbieten können, u.a. werden Sie bald nicht einmal mehr Einkaufen fahren müssen. Sie können sich dann bequem per Knopfdruck Ihre benötigten Waren liefern lassen, da wir eng mit den Lebensmittelherstellern zusammenarbeiten und so Pläne für die Zukunft entwickeln.
+          article.half
+            h2 Philosophie
+            p#text
+              | Unsere Welt wird durch unsere Werte bestimmt, deswegen berücksichtigen wir diese in unserem täglichen Handeln. Neben dem Umweltschutz und unserem sozialen Engagement legen wir einen großen Wert auf die Zufriedenheit unserer Kunden und natürlich auch auf das Wohlbefinden unseres gesamten Teams.
+              br
+              br
+              a#philosophyBtn.btn.btn-outline-dark(href="/about/philosophy") Weiterlesen →

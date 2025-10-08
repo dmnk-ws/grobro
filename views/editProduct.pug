@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  h1.text-center=title
+  hr
+  .alert(class="alert-danger", role="alert", id="error-group", style="display: none")
+    ul#error
+  .row.justify-content-center.g-6
+      #cardSingle.card.shadow.p-3.mb-5.bg-body.rounded
+        #containerSingleImg.container
+          img#singleImg.img.rounded.mx-auto.d-block(src= product.pictureSingleURL)
+        .container
+          img#barcodeImg.img.rounded.mx-auto.d-block(src= product.pictureBarcodeURL)
+        table#tbl.table.table-striped
+          tbody
+            form#infoControl
+              tr
+                th#th(scope="row") Name:
+                td
+                  .form-floating.mb-3
+                    input#nameInput.form-control(type="text", name="name", placeholder="Name", value=product.name)
+                    label(for="floatingInput") Name
+              tr
+                th#th(scope="row") Anzahl:
+                td
+                  .form-floating.mb-3
+                    input#quantityInputEdit.form-control(type="number", name="quantity", placeholder="Quantity", value=product.quantity)
+                    label(for="floatingInput") Anzahl
+              tr
+                th#th(scope="row") Mindestens haltbar bis:
+                td
+                  .form-floating.mb-3
+                    input#expiryDateInput.form-control(type="date", name="date", placeholder="Date", value=dateFormat)
+                    label(for="floatingInput") Mindesthaltbarkeitsdatum
+              tr
+                th#th(scope="row") Inhaltsstoffe:
+                td
+                  .form-floating.mb-3
+                    textarea#ingredientsInput.form-control(type="text", name="ingredients", style="height: 100px", placeholder="Ingredients")=product.ingredients
+                    label(for="floatingTextarea") Inhaltsstoffe
+        p
+          input#editButton.btn.btn-outline-dark(type="button", name=product.id, value="Bearbeiten")
+          a#backBtn.btn.btn-outline-dark(href="/products/" + product.id) ← Zurück

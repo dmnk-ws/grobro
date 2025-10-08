@@ -1,0 +1,47 @@
+extends layoutActiveNav
+
+block content
+  nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+    .container
+      a(href="/")
+        i#logo.fas.fa-shopping-basket.fa-lg
+      a.navbar-brand(href="/") GroBro
+      button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarScroll.collapse.navbar-collapse
+        ul.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll(style="--bs-scroll-height: 100px;")
+          li.nav-item
+            a.nav-link.active(href="/about") Über uns
+          li.nav-item
+            a.nav-link(href="/search") Bestandssuche
+          li.nav-item
+            a.nav-link(href="/list") Produktübersicht
+          li.nav-item
+            a.nav-link(href="/add") Produkt hinzufügen
+  br
+  br
+  .container
+    h1.text-center= title
+    hr
+    br
+    #grad.container.shadow.p-3.mb-5.rounded
+      #indexAboutContainer
+        .section
+          article.half
+            h2 Umweltschutz
+            p#text
+              | Zukünftig achten wir bei der Produktion unserer Verpackungen für den Versand der Lebensmittel auf eine minimale Belastung der Umwelt und entwickeln unsere Produkte so energieeffizient und recycelbar wie möglich. Wir setzen auf eine genaue Überwachung der Lieferkette von Versand der Waren beim jeweiligen Supermarkt bis hin zu Ihnen nachhause.
+          article.half
+            h2 Soziales &amp; Gesellschaft
+            p#text
+              | Ein soziales Engagement spielt für uns auch eine extrem wichtige Rolle. Wir spenden nämlich bei jedem Einkauf von Ihnen mittels unserer Software einen kleinen Beitrag an die Welthungerhilfe, um nicht nur Ihren Kühlschrank zu füllen, sondern auch hungernden Menschen in Not zu helfen.
+          article.half
+            h2 Unsere Kunden
+            p#text
+              | Die Zufriedenheit unserer Kundschaft liegt uns am Herzen. Deshalb sind wir bei Grocery Brother stets bemüht, Ihnen unseren bestmöglichen Service zu bieten. Wir verpacken ihren Einkauf ausschließlich mit zuverlässigen Verpackungen und können dadurch die hohe Qualität und Frische Ihrer Waren dauerhaft sicherstellen. Eine der wichtigsten Grundlagen für die Wettbewerbsfähigkeit ist eine hohe Effizienz der gesamten Prozesskette. Wir legen Wert auf möglichst fehlerfreie Arbeit und immer bessere Produkte und Dienstleistungen – nicht zuletzt zur Zufriedenheit und zum Nutzen unserer Kunden.
+          article.half
+            h2 Unser Team
+            p#text
+              | Ein respektvoller Umgang zwischen Führungskräften und Mitarbeitern steht bei uns im Vordergrund. Gleichberechtigung innerhalb des Teams ist essentiell für eine gute und effiziente Arbeitsatmosphäre. Wir veranstalten regelmäßige Unternehmenstreffen und -ausflüge, damit sich unser Team auch privat besser kennenlernt.
+        p.text
+          a#backBtn.btn.btn-outline-dark(href="/about") ← Zurück

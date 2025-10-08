@@ -1,0 +1,43 @@
+extends layoutActiveNav
+
+block content
+  nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+    .container
+      a(href="/")
+        i#logo.fas.fa-shopping-basket.fa-lg
+      a.navbar-brand(href="/") GroBro
+      button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarScroll.collapse.navbar-collapse
+        ul.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll(style="--bs-scroll-height: 100px;")
+          li.nav-item
+            a.nav-link(href="/about") Über uns
+          li.nav-item
+            a.nav-link(href="/search") Bestandssuche
+          li.nav-item
+            a.nav-link(href="/list") Produktübersicht
+          li.nav-item
+            a.nav-link.active(href="/add") Produkt hinzufügen
+  br
+  br
+  .container
+    h1.text-center=title
+    hr
+    br
+    .alert(class="alert-danger", role="alert", id="error-group", style="display: none")
+      ul#error
+    br
+    #grad.container.shadow.p-3.mb-5.rounded
+      br
+      form#infoControl
+        #formColor.form-floating.mb-3
+          input#eanInput.form-control(type="number", name="ean", placeholder="EAN")
+          label(for="floatingInput") EAN
+        #formColor.form-floating.mb-3
+          input#quantityInputAdd.form-control(type="number", name="quantity", placeholder="Quantity")
+          label(for="floatingInput") Anzahl
+        #formColor.form-floating.mb-3
+          input#expiryDateInput.form-control(type="date", name="date", placeholder="Date added")
+          label(for="floatingInput") Mindesthaltbarkeitsdatum
+          br
+          input#addButton.btn.btn-outline-dark(type="button", value="Hinzufügen")
